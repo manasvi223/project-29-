@@ -79,6 +79,20 @@ function draw() {
   block15.display();
   fill("grey");
   block16.display();
+  fill("gold");
+  imageMode(CENTER)
+  image(polygon_img ,polygon.position.x,polygon.position.y,40,40);
+
+  slingShot.display();
+  
  
 
 }
+function mouseDragged(){
+  Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY});
+}
+function mouseReleased(){
+  slingShot.fly();
+}
+
+
